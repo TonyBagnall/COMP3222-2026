@@ -10,6 +10,8 @@ python code/lab4/lab4_task3.py
 
 These are **student starters**. The data loading runs, but the functions marked `NotImplementedError` are yours to complete. Each file has a `check_*` function that compares your code with the worked examples in the Week 4 lectures.
 
+The worked solutions are `lab4_task1_solution.py`, `lab4_task2_solution.py` and `lab4_task3_solution.py` in this directory. They show one way to complete the tasks after you have attempted them.
+
 The GunPoint and BasicMotions data are bundled with `aeon`, so `load_gunpoint` and `load_basic_motions` do not need a download. Both return a 3D array of shape `(n_cases, n_channels, n_timepoints)` and a 1D array of string labels.
 
 ## Task 1: distances and nearest neighbours
