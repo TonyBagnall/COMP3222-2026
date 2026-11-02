@@ -25,5 +25,3 @@ Implement `euclidean_distance` and `dtw_distance` in `lab4_task1.py`; you can re
 Implement `z_normalise`, `distance_profile`, `shapelet_distance`, `apply_kernel` and `max_and_ppv` in `lab4_task3.py`. Then call `check_functions()` to compare with L4.2 slides 24 and 30. Plot the distance profile and activation map of the same pattern on one case from each class, as described on the sheet. `RDSTClassifier` can take a minute or two to fit.
 
 The optional extension uses `information_gains` in the same file; `entropy` is provided.
-
-You do not need `bakeoff.py`, `classifier_compare.py` or `single_problem.py` for this lab.
