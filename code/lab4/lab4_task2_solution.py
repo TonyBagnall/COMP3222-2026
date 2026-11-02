@@ -60,6 +60,8 @@ if __name__ == "__main__":
 
     X_train, y_train = load_gunpoint(split="train")
     X_test, y_test = load_gunpoint(split="test")
+    raw_rf = RandomForestClassifier(random_state=0).fit(X_train[:, 0], y_train)
+    print(f"{'Raw series + RF':18s} {accuracy_score(y_test, raw_rf.predict(X_test[:, 0])):.3f}")
     models = {
         "Summary + RF": make_pipeline(SummaryTransformer(),
                                       RandomForestClassifier(random_state=0)),

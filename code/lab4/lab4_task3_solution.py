@@ -1,5 +1,7 @@
 """Lab 4, Task 3 solution: shapelet distance and convolution from scratch."""
 
+import time
+
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import accuracy_score
@@ -88,8 +90,11 @@ if __name__ == "__main__":
 
     for clf in [RocketClassifier(n_kernels=2000, random_state=0),
                 RDSTClassifier(random_state=0)]:
+        start = time.perf_counter()
         clf.fit(X_train, y_train)
-        print(f"{type(clf).__name__}: {accuracy_score(y_test, clf.predict(X_test)):.3f}")
+        fit_time = time.perf_counter() - start
+        print(f"{type(clf).__name__}: accuracy {accuracy_score(y_test, clf.predict(X_test)):.3f}, "
+              f"fit {fit_time:.1f}s")
 
     # Optional extension: best information gain of each feature.
     for name, values in [("sDist", s_dist), ("max activation", max_activation)]:
